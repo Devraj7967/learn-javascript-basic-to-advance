@@ -1,0 +1,25 @@
+<DOCTYPE html>
+<html>
+<head></head>
+<body>
+    <h1>hello world</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+    const saydate = function(){
+        console.log("hitesh", Date.now())
+    }
+    const date = setInterval(saydate , 2000)
+
+    document.querySelector('#start').addEventListener('click' , function(){
+       console.log(date)
+
+    })
+
+    document.querySelector('#stop').addEventListener('click' , function(){
+       clearInterval(date)
+    })
+   
+</script>
+</html>

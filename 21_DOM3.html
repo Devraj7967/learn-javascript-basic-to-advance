@@ -1,0 +1,36 @@
+<DOCTYPE html>
+    <head>
+        <title>learn dom</title>
+    </head>
+<body>
+    <ul class="language">
+        <li>js</li>
+    </ul>
+
+</body>
+<script>
+    function addlanguage(langname){
+        const li = document.createElement('li');
+        li.innerHTML = `${langname}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addlanguage("python")
+    
+//perfectway
+    function addoptilanguage(langname){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langname))
+        document.querySelector('.language').appendChild(li)
+    }
+    addoptilanguage("java")
+
+    //to edit element
+    document.querySelectorAll('.language li')[1].textContent = 'typescript';
+
+    //to remove
+    document.querySelectorAll('.language li')[0].remove();
+
+
+
+</script>
+</html>
